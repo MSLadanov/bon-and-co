@@ -1,5 +1,8 @@
+import { Welcome } from "@components/Welcome";
 import { ReactElement } from "react";
 
 export const Main = (): ReactElement => {
-  return <main>Main</main>;
+  return <main>
+    <Welcome/>
+  </main>;
 };
