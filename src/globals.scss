@@ -1,13 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+$burgundy: #8b1e3f;
+$black: #1b1b1b;
+$sandy: #e1caa1;
+$creme: #fcfbf7;
+
 $breakpoint-mobile-desktop: 1200px;
 
-@mixin mobile{
-    @media screen and (max-width: $breakpoint-mobile-desktop) {
-        @content
-    }
-};
+@mixin mobile {
+  @media screen and (max-width: $breakpoint-mobile-desktop) {
+    @content;
+  }
+}
 
-@mixin desktop{
-    @media screen and (min-width: $breakpoint-mobile-desktop) {
-        @content
-    }
-};
+@mixin desktop {
+  @media screen and (min-width: $breakpoint-mobile-desktop) {
+    @content;
+  }
+}
