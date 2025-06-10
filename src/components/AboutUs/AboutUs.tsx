@@ -5,8 +5,9 @@ import { Flex } from "@components/ui/Flex";
 import { Button } from "@components/ui/Button";
 import { Image } from "@mantine/core";
 import { ReactElement } from "react";
+import "./style.scss";
 
-export const AboutUs = () : ReactElement => {
+export const AboutUs = (): ReactElement => {
   return (
     <>
       <Image src={about1} alt="about1" />

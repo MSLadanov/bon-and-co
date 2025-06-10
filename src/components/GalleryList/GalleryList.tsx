@@ -28,7 +28,7 @@ const galleryImages = [
 export const GalleryList = (): ReactElement => {
   return (
     <Flex direction="column" gap="md">
-      <Flex direction="column" className="about" mb="xl">
+      <Flex direction="column" mb="xl">
         <h1>Фотогалерея</h1>
         <p>
           Оцените наше мастерство в разделе галереи. Здесь представлены примеры
