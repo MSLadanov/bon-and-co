@@ -11,6 +11,7 @@ import { MantineProvider } from "@mantine/core";
 import { ROUTES } from '@routes/constants'
 import "./globals.scss";
 import '@mantine/core/styles.css';
+import '@mantine/carousel/styles.css';
 import "./index.css";
 
 createRoot(document.getElementById("root")!).render(

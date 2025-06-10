@@ -1,0 +1,21 @@
+.slide-description {
+  position: absolute;
+  color: transparent;
+  text-align: center;
+  font-size: 16px;
+  width: 80%;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: color 0.5s ease-in;
+  &.hovered {
+    color: white;
+  }
+}
+.slide-category {
+  padding: 10px;
+  p {
+    font-size: 16px;
+
+  }
+}
