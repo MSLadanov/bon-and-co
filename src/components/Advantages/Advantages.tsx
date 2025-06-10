@@ -7,6 +7,7 @@ import advantages3 from "@assets/Advantages/advantages3.png";
 import { CollapseBox } from "@ui/CollapseBox";
 import { Button } from "@ui/Button";
 import Marquee from "react-fast-marquee";
+import { Blockquote } from "../Blockquote/Blockquote";
 import "./style.scss";
 
 export const Advantages = (): ReactElement => {
@@ -70,8 +71,14 @@ export const Advantages = (): ReactElement => {
       </ul>
       <Button>Записаться на мастер-класс</Button>
       <Marquee>
-         ✦ 15 000 рублей вместо 25 000 рублей ✦ Цена действует при записи в течение 2 дней с момента получения письма. 
+        ✦ 15 000 рублей вместо 25 000 рублей ✦ Цена действует при записи в
+        течение 2 дней с момента получения письма.
       </Marquee>
+      <Blockquote>
+        Не упустите возможность стать экспертом и увеличить свой доход! Мы
+        всегда рады ответить на ваши вопросы и с нетерпением ждем вашего
+        отклика.
+      </Blockquote>
     </Flex>
   );
 };
