@@ -5,6 +5,13 @@ $black: #1b1b1b;
 $sandy: #e1caa1;
 $creme: #fcfbf7;
 
+:export{
+  burgundy: $burgundy;
+  black: $black;
+  sandy: $sandy;
+  creme: $creme
+}
+
 $breakpoint-mobile-desktop: 1200px;
 
 @mixin mobile {

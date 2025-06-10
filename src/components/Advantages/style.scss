@@ -1,7 +1,20 @@
+@import '../../globals.scss';
+
 .advantages {
   margin-top: 60px;
   ul {
-    list-style-type: '✦';
+    list-style-type: "✦";
     padding-left: 20px;
+  }
+}
+
+.rfm-marquee-container {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 15px 0px;
+  transition: all ease-in 0.2s;
+  &:hover {
+    background-color: $burgundy;
+    color: white;
   }
 }

@@ -6,6 +6,7 @@ import advantages2 from "@assets/Advantages/advantages2.png";
 import advantages3 from "@assets/Advantages/advantages3.png";
 import { CollapseBox } from "@ui/CollapseBox";
 import { Button } from "@ui/Button";
+import Marquee from "react-fast-marquee";
 import "./style.scss";
 
 export const Advantages = (): ReactElement => {
@@ -68,6 +69,9 @@ export const Advantages = (): ReactElement => {
         <li>Возможность трудоустройства в нашу компанию</li>
       </ul>
       <Button>Записаться на мастер-класс</Button>
+      <Marquee>
+         ✦ 15 000 рублей вместо 25 000 рублей ✦ Цена действует при записи в течение 2 дней с момента получения письма. 
+      </Marquee>
     </Flex>
   );
 };
