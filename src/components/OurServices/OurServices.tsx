@@ -48,6 +48,7 @@ export const OurServices = () => {
   ];
   const slides = images.map((image) => (
     <Slide
+      key={image.id}
       id={image.id}
       image={image.image}
       alt={image.alt}
