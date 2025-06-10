@@ -2,7 +2,10 @@ import { Flex } from "@ui/Flex";
 import { ReactElement } from "react";
 import { Image } from "@mantine/core";
 import advantages1 from "@assets/Advantages/advantages1.png";
+import advantages2 from "@assets/Advantages/advantages2.png";
+import advantages3 from "@assets/Advantages/advantages3.png";
 import { CollapseBox } from "@ui/CollapseBox";
+import { Button } from "@ui/Button";
 import "./style.scss";
 
 export const Advantages = (): ReactElement => {
@@ -47,6 +50,24 @@ export const Advantages = (): ReactElement => {
           description={adv.description}
         />
       ))}
+      <Image src={advantages2} alt="advantages" />
+      <Button>Перейти в галерею</Button>
+      <Image src={advantages3} alt="advantages" />
+      <h2>Преимущества</h2>
+      <p>
+        Приглашаем на мастер-класс по созданию раковин из керамогранита в
+        Краснодаре. Раковины из керамогранита становятся всё более популярными,
+        и вы можете стать одним из первых специалистов в этой трендовой
+        технологии.
+      </p>
+      <h3>Что включено в мастер-класс?</h3>
+      <ul>
+        <li>2 дня обучения от опытных мастеров</li>
+        <li>Материалы и инструменты предоставляются</li>
+        <li>Сертификат об окончании курса</li>
+        <li>Возможность трудоустройства в нашу компанию</li>
+      </ul>
+      <Button>Записаться на мастер-класс</Button>
     </Flex>
   );
 };
