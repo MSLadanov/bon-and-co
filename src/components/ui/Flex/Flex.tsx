@@ -25,6 +25,7 @@ interface IFlexProps {
     | "align-flex-end"
     | "align-baseline";
   wrap?: "wrap" | "nowrap" | "wrap-reverse";
+  onClick?: () => void
 }
 
 export const Flex: React.FC<IFlexProps> = ({
@@ -33,10 +34,11 @@ export const Flex: React.FC<IFlexProps> = ({
   justifyContent = 'flex-start',
   alignItems = "align-stretch",
   wrap = "nowrap",
-  className
+  className,
+  onClick
 }): ReactElement => {
   return (
-    <div className={`flex-container ${className} ${flexDirection} ${justifyContent} ${alignItems} ${wrap}`}>
+    <div className={`flex-container ${className} ${flexDirection} ${justifyContent} ${alignItems} ${wrap}`} onClick={onClick}>
       {children}
     </div>
   );

@@ -1,10 +1,37 @@
 import { Flex } from "@ui/Flex";
 import { ReactElement } from "react";
 import { Image } from "@mantine/core";
-import advantages1 from '@assets/Advantages/advantages1.png'
+import advantages1 from "@assets/Advantages/advantages1.png";
+import { CollapseBox } from "@ui/CollapseBox";
 import "./style.scss";
 
 export const Advantages = (): ReactElement => {
+  const advantages = [
+    {
+      id: 1,
+      title: "Авторские решения",
+      description:
+        "Мы создаем уникальные изделия, воплощая в жизнь ваши самые смелые идеи и проекты.",
+    },
+    {
+      id: 2,
+      title: "Высокое качество",
+      description:
+        "Используем только лучшие материалы и передовые технологии, чтобы обеспечить долговечность и изящество каждого изделия.",
+    },
+    {
+      id: 3,
+      title: "Индивидуальный подход",
+      description:
+        "Мы внимательно учитываем ваши пожелания и требования, чтобы создать продукт, полностью соответствующий вашим ожиданиям.",
+    },
+    {
+      id: 4,
+      title: "Доставка и монтаж",
+      description:
+        "Оперативная доставка и профессиональный монтаж обеспечивают безупречный результат в указанные сроки.",
+    },
+  ];
   return (
     <Flex className="advantages" flexDirection="column">
       <h2>Преимущества</h2>
@@ -12,7 +39,14 @@ export const Advantages = (): ReactElement => {
         В каждом проекте мы стремимся превзойти ожидания, предлагая не просто
         продукт, а творческое решение, созданное с душой и вниманием к деталям.
       </p>
-      <Image src={advantages1} alt="advantages"/>
+      <Image src={advantages1} alt="advantages" />
+      {advantages.map((adv) => (
+        <CollapseBox
+          key={adv.id}
+          title={adv.title}
+          description={adv.description}
+        />
+      ))}
     </Flex>
   );
 };
