@@ -5,6 +5,9 @@ import { FaTelegram } from "react-icons/fa";
 import { Flex } from "@ui/Flex";
 import { NavLink } from "react-router";
 import { ROUTES } from "@routes/constants";
+import getAmo from "@assets/supporters/getamo.png";
+import myBusiness from "@assets/supporters/my-business.png";
+import { Image } from "@mantine/core";
 import "./style.scss";
 
 export const Footer = (): ReactElement => {
@@ -38,6 +41,15 @@ export const Footer = (): ReactElement => {
           <RiWhatsappFill size={"2.5em"} />
           <FaTelegram size={"2.5em"} />
         </Flex>
+      </Flex>
+      <Flex
+        className="footer-bottom"
+        flexDirection="column"
+      >
+        <Image src={getAmo} alt="get-amo" />
+        <Image src={myBusiness} alt="my-business" />
+        <p>2024 © Бондарев Евгений Владимирович Все права защищены.</p>
+        <p>Политика конфиденциальности</p>
       </Flex>
     </footer>
   );
