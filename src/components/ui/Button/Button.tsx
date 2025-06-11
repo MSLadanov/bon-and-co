@@ -1,6 +1,14 @@
-import { PropsWithChildren, ReactElement } from "react";
-import './style.scss'
+import { ReactElement, ReactNode } from "react";
+import "./style.scss";
 
-export const Button = ({ children }: PropsWithChildren): ReactElement => {
-  return <button>{children}</button>;
+interface IButtonProps {
+  children: ReactNode;
+  className?: "black" | "transparent";
+}
+
+export const Button: React.FC<IButtonProps> = ({
+  children,
+  className = "transparent",
+}): ReactElement => {
+  return <button className={className}>{children}</button>;
 };

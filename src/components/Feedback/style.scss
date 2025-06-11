@@ -8,8 +8,8 @@
   }
   .mantine-Carousel-controls {
     width: fit-content;
-    top: 20%;
-    left: 70%;
+    top: 20vw;
+    left: calc(var(--carousel-height) * 15);
     .mantine-Carousel-control {
       color: white;
       background-color: transparent;

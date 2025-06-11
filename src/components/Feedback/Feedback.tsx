@@ -2,6 +2,11 @@ import { ReactElement } from "react";
 import { Flex } from "@ui/Flex";
 import { Blockquote } from "../Blockquote/Blockquote";
 import { Carousel } from "@mantine/carousel";
+import { Image } from "@mantine/core";
+import feedback1 from "@assets/Feedback/feedback1.png";
+import { Input } from "@ui/Input/Input";
+import { TextArea } from "@ui/TextArea/TextArea";
+import { Button } from "@ui/Button";
 import "./style.scss";
 
 export const Feedback = (): ReactElement => {
@@ -40,6 +45,17 @@ export const Feedback = (): ReactElement => {
       <Blockquote withBorders>
         <Carousel>{reviewSlides}</Carousel>
       </Blockquote>
+      <Image src={feedback1} alt="feedback1" />
+      <Flex className="feedback-field" flexDirection="column">
+        <h1>Отзывы</h1>
+        <p>
+          Мы гордимся тем, что наши клиенты остаются довольны нашей работой.
+          Читайте отзывы тех, кто уже выбрал BON&CO для своего интерьера.
+        </p>
+        <Input placeholder="Имя"/>
+        <TextArea placeholder="Комментарий"/>
+        <Button className="black">Отправить</Button>
+      </Flex>
     </Flex>
   );
 };

@@ -1,0 +1,7 @@
+textarea {
+    border: 2px solid black;
+    padding: 3% 5%;
+    &::placeholder{
+        color: black
+    }
+}
