@@ -38,8 +38,9 @@ export const Header = (): ReactElement => {
       >
         <p>Связаться</p>
         <Burger
-          lineSize={4}
+          lineSize={2}
           size="xl"
+          h={'1px'}
           opened={opened}
           onClick={open}
           aria-label="Toggle navigation"
