@@ -35,7 +35,7 @@ export const Feedback = (): ReactElement => {
   ));
   return (
     <Flex className="feedback" flexDirection="column">
-      <Flex className="feedback-text" flexDirection="column">
+      <Flex className="feedback__text" flexDirection="column">
         <h1>Отзывы</h1>
         <p>
           Мы гордимся тем, что наши клиенты остаются довольны нашей работой.
@@ -46,7 +46,7 @@ export const Feedback = (): ReactElement => {
         <Carousel>{reviewSlides}</Carousel>
       </Blockquote>
       <Image src={feedback1} alt="feedback1" />
-      <Flex className="feedback-field" flexDirection="column">
+      <Flex className="feedback__field" flexDirection="column">
         <h1>Отзывы</h1>
         <p>
           Мы гордимся тем, что наши клиенты остаются довольны нашей работой.

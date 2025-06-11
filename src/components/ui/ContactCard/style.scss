@@ -1,0 +1,17 @@
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  &__header {
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
+  &__body {
+    text-align: center;
+    a {
+      color: black;
+      text-decoration: none;
+    }
+  }
+}
