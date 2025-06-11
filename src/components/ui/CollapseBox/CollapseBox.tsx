@@ -1,9 +1,9 @@
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Text, Collapse, Box } from "@mantine/core";
+import { Collapse, Box } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { Flex } from "@ui/Flex";
-import './style.scss'
+import "./style.scss";
 
 interface ICollapseBoxProps {
   title: string;
@@ -17,12 +17,17 @@ export const CollapseBox: React.FC<ICollapseBoxProps> = ({
   const [opened, { toggle }] = useDisclosure(false);
   return (
     <Box className="collapse" maw={400} mx="auto">
-        <Flex className="collapse-box" justifyContent="space-between" onClick={toggle}>
-          <Text>{title}</Text>
-          <FontAwesomeIcon icon={faAngleDown} />
-        </Flex>
-      <Collapse in={opened}>
-        <Text>{description}</Text>
+      <Flex
+        className="collapse-box"
+        justifyContent="space-between"
+        alignItems="align-center"
+        onClick={toggle}
+      >
+        <h3>{title}</h3>
+        <FontAwesomeIcon icon={faAngleDown} size="2x" />
+      </Flex>
+      <Collapse className="collapse-content" in={opened}>
+        <p>{description}</p>
       </Collapse>
     </Box>
   );

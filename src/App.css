@@ -9,3 +9,7 @@
 *::after {
 	box-sizing: border-box;
 }
+
+#root{
+	background-color: #fcfbf7;
+}

@@ -1,3 +1,19 @@
 .collapse{
     border-bottom: 1px solid black;
+    width: 85%;
+    &-box{
+        display: flex;
+        align-items: center;
+        height: 94px;
+        h3{
+            font-size: 20px;
+            font-weight: normal;
+            width: 70%;
+        }
+    }
+    &-content{
+        p{
+            padding: 0 !important;
+        }
+    }
 }

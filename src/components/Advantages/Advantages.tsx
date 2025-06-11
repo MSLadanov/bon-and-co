@@ -38,7 +38,7 @@ export const Advantages = (): ReactElement => {
     },
   ];
   return (
-    <Flex className="advantages" flexDirection="column">
+    <Flex className="advantages" flexDirection="column" alignItems="align-center">
       <h2>Преимущества</h2>
       <p>
         В каждом проекте мы стремимся превзойти ожидания, предлагая не просто
@@ -52,9 +52,9 @@ export const Advantages = (): ReactElement => {
           description={adv.description}
         />
       ))}
-      <Image src={advantages2} alt="advantages" />
+      <Image src={advantages2} alt="advantages" mt={'5%'} />
       <Button>Перейти в галерею</Button>
-      <Image src={advantages3} alt="advantages" />
+      <Image src={advantages3} alt="advantages" w={'100vw'} mb={'15%'}/>
       <h2>Преимущества</h2>
       <p>
         Приглашаем на мастер-класс по созданию раковин из керамогранита в
