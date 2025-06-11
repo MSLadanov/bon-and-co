@@ -34,12 +34,12 @@ export const Footer = (): ReactElement => {
         </nav>
         <Flex
           className="footer-links"
-          justifyContent="center"
+          justifyContent="space-between"
           alignItems="align-center"
         >
-          <AiFillInstagram size={"2.5em"} />
-          <RiWhatsappFill size={"2.5em"} />
-          <FaTelegram size={"2.5em"} />
+          <AiFillInstagram size={"2em"} />
+          <RiWhatsappFill size={"2em"} />
+          <FaTelegram size={"2em"} />
         </Flex>
       </Flex>
       <Flex
