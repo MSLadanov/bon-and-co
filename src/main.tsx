@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "@/App";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router";
+import { Routes, Route, Navigate, HashRouter } from "react-router";
 import { About } from "./routes/About";
 import { Contacts } from "./routes/Contacts";
 import { Gallery } from "./routes/Gallery";
@@ -16,7 +16,7 @@ import "./index.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <MantineProvider>
         <Routes>
           <Route path="/" element={<App />}>
@@ -30,6 +30,6 @@ createRoot(document.getElementById("root")!).render(
           </Route>
         </Routes>
       </MantineProvider>
-    </BrowserRouter>
+    </HashRouter>
   </StrictMode>
 );
