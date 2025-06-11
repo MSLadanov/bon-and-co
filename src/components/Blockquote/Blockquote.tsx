@@ -25,6 +25,7 @@ export const Blockquote: React.FC<IBlockquoteProps> = ({
           withBorders ? "with-borders" : ""
         }`}
         bg={"black"}
+        w={'100%'}
       >
         {children}
       </Paper>

@@ -36,7 +36,6 @@ export const GalleryList = (): ReactElement => {
           и индивидуального подхода к каждому проекту.
         </p>
       </Flex>
-
       <SimpleGrid cols={{ base: 1, sm: 2, md: 3, lg: 4 }}>
         {galleryImages.map((image, index) => (
           <Image

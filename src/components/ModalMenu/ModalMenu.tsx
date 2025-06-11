@@ -17,6 +17,9 @@ export const ModalMenu = (): ReactElement => {
           <NavLink to={ROUTES.MAIN}>Мастер класс</NavLink>
         </li>
         <li>
+          <NavLink to={ROUTES.REVIEWS}>Отзывы</NavLink>
+        </li>
+        <li>
           <NavLink to={ROUTES.CONTACTS}>Контакты</NavLink>
         </li>
       </ul>

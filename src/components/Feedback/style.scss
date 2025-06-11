@@ -1,0 +1,20 @@
+.feedback {
+  .mantine-Paper-root {
+    padding: 20% 0%;
+    h3{
+        margin: 15% 0%;
+        text-align: start;
+    }
+  }
+  .mantine-Carousel-controls {
+    width: fit-content;
+    top: 20%;
+    left: 70%;
+    .mantine-Carousel-control {
+      color: white;
+      background-color: transparent;
+      border: none;
+      scale: 2;
+    }
+  }
+}
