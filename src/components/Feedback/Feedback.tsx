@@ -34,28 +34,54 @@ export const Feedback = (): ReactElement => {
     </Carousel.Slide>
   ));
   return (
-    <Flex className="feedback" flexDirection="column">
-      <Flex className="feedback__text" flexDirection="column" alignItems="align-center">
-        <h1>Отзывы</h1>
-        <p>
-          Мы гордимся тем, что наши клиенты остаются довольны нашей работой.
-          Читайте отзывы тех, кто уже выбрал BON&CO для своего интерьера.
-        </p>
+    <>
+      <Flex className="feedback" flexDirection="column">
+        <Flex
+          className="feedback__text"
+          flexDirection="column"
+          alignItems="align-center"
+        >
+          <h1>Отзывы</h1>
+          <p>
+            Мы гордимся тем, что наши клиенты остаются довольны нашей работой.
+            Читайте отзывы тех, кто уже выбрал BON&CO для своего интерьера.
+          </p>
+        </Flex>
+        <Blockquote withBorders>
+          <Carousel>{reviewSlides}</Carousel>
+        </Blockquote>
+        <Image src={feedback1} alt="feedback1" />
+        <Flex
+          className="feedback__field"
+          flexDirection="column"
+          alignItems="align-center"
+        >
+          <h1>Написать отзыв</h1>
+          <p>
+            Ваша обратная связь поможет нам стать лучше и предложить еще более
+            качественные услуги.
+          </p>
+          <Input placeholder="Имя" />
+          <TextArea placeholder="Комментарий" />
+          <Button className="black">Отправить</Button>
+        </Flex>
       </Flex>
-      <Blockquote withBorders>
-        <Carousel>{reviewSlides}</Carousel>
-      </Blockquote>
-      <Image src={feedback1} alt="feedback1" />
-      <Flex className="feedback__field" flexDirection="column" alignItems="align-center">
-        <h1>Написать отзыв</h1>
-        <p>
-          Ваша обратная связь поможет нам стать лучше и предложить еще более
-          качественные услуги.
-        </p>
-        <Input placeholder="Имя" />
-        <TextArea placeholder="Комментарий" />
-        <Button className="black">Отправить</Button>
+      <Flex className="feedback-desktop" flexDirection="column">
+        <Flex
+          className="feedback__text"
+          flexDirection="column"
+          alignItems="align-center"
+        >
+          <h1>Отзывы</h1>
+          <p>
+            Мы гордимся тем, что наши клиенты остаются довольны нашей работой.
+            Читайте отзывы тех, кто уже выбрал BON&CO для своего интерьера.
+          </p>
+        </Flex>
+        <Blockquote withBorders>
+          <Carousel>{reviewSlides}</Carousel>
+        </Blockquote>
       </Flex>
-    </Flex>
+    </>
   );
 };
