@@ -55,7 +55,7 @@ export const Footer = (): ReactElement => {
           <p>2024 © Бондарев Евгений Владимирович Все права защищены.</p>{" "}
           <p>Политика конфиденциальности</p>
         </Center>
-        <Center>
+        <Center mb={"2%"}>
           <Image src={getAmo} alt="get-amo" />
           <Image src={myBusiness} alt="my-business" />
         </Center>
