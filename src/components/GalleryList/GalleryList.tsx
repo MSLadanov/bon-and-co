@@ -11,7 +11,8 @@ import gallery7 from "@assets/Gallery/gallery7.png";
 import gallery8 from "@assets/Gallery/gallery8.png";
 import gallery9 from "@assets/Gallery/gallery9.png";
 import gallery10 from "@assets/Gallery/gallery10.png";
-import './styles.scss'
+import gallery from "@assets/Gallery/gallery.png";
+import "./styles.scss";
 
 const galleryImages = [
   { src: gallery1, alt: "Пример работы 1" },
@@ -28,25 +29,49 @@ const galleryImages = [
 
 export const GalleryList = (): ReactElement => {
   return (
-    <Flex className="gallery" direction="column" gap="md">
-      <Flex className="gallery__title" direction="column" mb="xl" align={'center'}>
-        <h1>Фотогалерея</h1>
-        <p>
-          Оцените наше мастерство в разделе галереи. Здесь представлены примеры
-          наших работ. Каждое фото — это подтверждение нашего высокого качества
-          и индивидуального подхода к каждому проекту.
-        </p>
+    <>
+      <Flex className="gallery" direction="column" gap="md">
+        <Flex
+          className="gallery__title"
+          direction="column"
+          mb="xl"
+          align={"center"}
+        >
+          <h1>Фотогалерея</h1>
+          <p>
+            Оцените наше мастерство в разделе галереи. Здесь представлены
+            примеры наших работ. Каждое фото — это подтверждение нашего высокого
+            качества и индивидуального подхода к каждому проекту.
+          </p>
+        </Flex>
+        <SimpleGrid cols={{ base: 1, sm: 2, md: 3, lg: 4 }}>
+          {galleryImages.map((image, index) => (
+            <Image
+              key={index}
+              src={image.src}
+              alt={image.alt}
+              style={{ width: "100%", height: "auto" }}
+            />
+          ))}
+        </SimpleGrid>
       </Flex>
-      <SimpleGrid cols={{ base: 1, sm: 2, md: 3, lg: 4 }}>
-        {galleryImages.map((image, index) => (
-          <Image
-            key={index}
-            src={image.src}
-            alt={image.alt}
-            style={{ width: "100%", height: "auto" }}
-          />
-        ))}
-      </SimpleGrid>
-    </Flex>
+      <Flex className="gallery-desktop" justify={"center"}>
+        <Flex
+          className="gallery-desktop__title"
+          direction="column"
+          w={"40%"}
+          ta={"center"}
+          mt={'7%'}
+        >
+          <h1>Фотогалерея</h1>
+          <p>
+            Оцените наше мастерство в разделе галереи. Здесь представлены
+            примеры наших работ. Каждое фото — это подтверждение нашего высокого
+            качества и индивидуального подхода к каждому проекту.
+          </p>
+        </Flex>
+      </Flex>
+      <Image src={gallery} />
+    </>
   );
 };
