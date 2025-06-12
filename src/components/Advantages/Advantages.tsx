@@ -1,6 +1,6 @@
 import { Flex } from "@ui/Flex";
 import { ReactElement } from "react";
-import { Image } from "@mantine/core";
+import { Center, Image, SimpleGrid } from "@mantine/core";
 import advantages1 from "@assets/Advantages/advantages1.png";
 import advantages2 from "@assets/Advantages/advantages2.png";
 import advantages3 from "@assets/Advantages/advantages3.png";
@@ -38,47 +38,83 @@ export const Advantages = (): ReactElement => {
     },
   ];
   return (
-    <Flex className="advantages" flexDirection="column" alignItems="align-center">
-      <h2>Преимущества</h2>
-      <p>
-        В каждом проекте мы стремимся превзойти ожидания, предлагая не просто
-        продукт, а творческое решение, созданное с душой и вниманием к деталям.
-      </p>
-      <Image src={advantages1} alt="advantages" />
-      {advantages.map((adv) => (
-        <CollapseBox
-          key={adv.id}
-          title={adv.title}
-          description={adv.description}
-        />
-      ))}
-      <Image src={advantages2} alt="advantages" mt={'5%'} />
-      <Button>Перейти в галерею</Button>
-      <Image src={advantages3} alt="advantages" w={'100vw'} mb={'15%'}/>
-      <h2>Преимущества</h2>
-      <p>
-        Приглашаем на мастер-класс по созданию раковин из керамогранита в
-        Краснодаре. Раковины из керамогранита становятся всё более популярными,
-        и вы можете стать одним из первых специалистов в этой трендовой
-        технологии.
-      </p>
-      <h3>Что включено в мастер-класс?</h3>
-      <ul>
-        <li>2 дня обучения от опытных мастеров</li>
-        <li>Материалы и инструменты предоставляются</li>
-        <li>Сертификат об окончании курса</li>
-        <li>Возможность трудоустройства в нашу компанию</li>
-      </ul>
-      <Button>Записаться на мастер-класс</Button>
-      <Marquee>
-        ✦ 15 000 рублей вместо 25 000 рублей ✦ Цена действует при записи в
-        течение 2 дней с момента получения письма.
-      </Marquee>
-      <Blockquote>
-        Не упустите возможность стать экспертом и увеличить свой доход! Мы
-        всегда рады ответить на ваши вопросы и с нетерпением ждем вашего
-        отклика.
-      </Blockquote>
-    </Flex>
+    <>
+      <Flex
+        className="advantages"
+        flexDirection="column"
+        alignItems="align-center"
+      >
+        <h2>Преимущества</h2>
+        <p>
+          В каждом проекте мы стремимся превзойти ожидания, предлагая не просто
+          продукт, а творческое решение, созданное с душой и вниманием к
+          деталям.
+        </p>
+        <Image src={advantages1} alt="advantages" />
+        {advantages.map((adv) => (
+          <CollapseBox
+            key={adv.id}
+            title={adv.title}
+            description={adv.description}
+          />
+        ))}
+        <Image src={advantages2} alt="advantages" mt={"5%"} />
+        <Button>Перейти в галерею</Button>
+        <Image src={advantages3} alt="advantages" w={"100vw"} mb={"15%"} />
+        <h2>Преимущества</h2>
+        <p>
+          Приглашаем на мастер-класс по созданию раковин из керамогранита в
+          Краснодаре. Раковины из керамогранита становятся всё более
+          популярными, и вы можете стать одним из первых специалистов в этой
+          трендовой технологии.
+        </p>
+        <h3>Что включено в мастер-класс?</h3>
+        <ul>
+          <li>2 дня обучения от опытных мастеров</li>
+          <li>Материалы и инструменты предоставляются</li>
+          <li>Сертификат об окончании курса</li>
+          <li>Возможность трудоустройства в нашу компанию</li>
+        </ul>
+        <Button>Записаться на мастер-класс</Button>
+        <Marquee>
+          ✦ 15 000 рублей вместо 25 000 рублей ✦ Цена действует при записи в
+          течение 2 дней с момента получения письма.
+        </Marquee>
+        <Blockquote>
+          Не упустите возможность стать экспертом и увеличить свой доход! Мы
+          всегда рады ответить на ваши вопросы и с нетерпением ждем вашего
+          отклика.
+        </Blockquote>
+      </Flex>
+      <Flex className="advantages-desktop" flexDirection="column" alignItems="align-center">
+        <SimpleGrid w={'80%'} cols={{ base: 2 }}>
+          <div>
+            <h2>Преимущества</h2>
+            <p>
+              Приглашаем на мастер-класс по созданию раковин из керамогранита в
+              Краснодаре. Раковины из керамогранита становятся всё более
+              популярными, и вы можете стать одним из первых специалистов в этой
+              трендовой технологии.
+            </p>
+          </div>
+          <div>
+            <Image src={advantages1} alt="advantages" w={'500px'} h={'336px'} />
+          </div>
+          <Center>
+            <Image src={advantages2} alt="advantages" w={'350px'} h={'248px'} mt={"5%"} />
+            <Button>Перейти в галерею</Button>
+          </Center>
+          <div>
+            {advantages.map((adv) => (
+              <CollapseBox
+                key={adv.id}
+                title={adv.title}
+                description={adv.description}
+              />
+            ))}
+          </div>
+        </SimpleGrid>
+      </Flex>
+    </>
   );
 };

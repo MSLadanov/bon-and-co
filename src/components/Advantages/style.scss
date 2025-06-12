@@ -3,6 +3,9 @@
 .advantages {
   margin-top: 23%;
   padding: 0% 5%;
+  @include desktop {
+    display: none;
+  }
   ul {
     list-style-type: "✦";
     padding-left: 10%;
@@ -58,6 +61,24 @@
     height: 291px;
     overflow: hidden;
     width: 100vw;
+  }
+}
+
+.advantages-desktop{
+  margin-top: 18%;
+  @include mobile {
+    display: none;
+  }
+  .mantine-SimpleGrid-root{
+    align-items: center;
+    .mantine-Center-root{
+      flex-direction: column;
+    }
+    button{
+      margin-top: 5%;
+      width: 244px;
+      height: 53px;
+    }
   }
 }
 
