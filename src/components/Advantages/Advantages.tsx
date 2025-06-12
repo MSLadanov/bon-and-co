@@ -147,6 +147,15 @@ export const Advantages = (): ReactElement => {
             <Image src={advantages3Desktop} alt="advantages" />
           </Center>
         </SimpleGrid>
+         <Marquee>
+          ✦ 15 000 рублей вместо 25 000 рублей ✦ Цена действует при записи в
+          течение 2 дней с момента получения письма.
+        </Marquee>
+        <Blockquote>
+          Не упустите возможность стать экспертом и увеличить свой доход! Мы
+          всегда рады ответить на ваши вопросы и с нетерпением ждем вашего
+          отклика.
+        </Blockquote>
       </Flex>
     </>
   );
