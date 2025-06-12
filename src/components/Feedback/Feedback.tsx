@@ -2,8 +2,9 @@ import { ReactElement } from "react";
 import { Flex } from "@ui/Flex";
 import { Blockquote } from "../Blockquote/Blockquote";
 import { Carousel } from "@mantine/carousel";
-import { Image } from "@mantine/core";
+import { Image, SimpleGrid } from "@mantine/core";
 import feedback1 from "@assets/Feedback/feedback1.png";
+import feedback1Desktop from "@assets/Feedback/feedback1Desktop.png";
 import { Input } from "@ui/Input/Input";
 import { TextArea } from "@ui/TextArea/TextArea";
 import { Button } from "@ui/Button";
@@ -81,6 +82,23 @@ export const Feedback = (): ReactElement => {
         <Blockquote withBorders>
           <Carousel>{reviewSlides}</Carousel>
         </Blockquote>
+        <SimpleGrid cols={{base: 2}}>
+          <Flex
+          className="feedback__field"
+          flexDirection="column"
+          alignItems="align-center"
+        >
+          <h1>Написать отзыв</h1>
+          <p>
+            Ваша обратная связь поможет нам стать лучше и предложить еще более
+            качественные услуги.
+          </p>
+          <Input placeholder="Имя" />
+          <TextArea placeholder="Комментарий" />
+          <Button className="black">Отправить</Button>
+        </Flex>
+          <Image src={feedback1Desktop} alt="feedback1" />
+        </SimpleGrid>
       </Flex>
     </>
   );

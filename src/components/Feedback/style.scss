@@ -82,6 +82,21 @@
       margin-bottom: 12%;
     }
   }
+  .feedback__field{
+    padding-left: 15%;
+    padding-right: 10%;
+    h1{
+      margin-top: 21%;
+      font-size: 48px;
+    }
+    p{
+      font-size: 20px;
+    }
+    button, textarea, input{
+      margin-left: 18%;
+      width: 100%;
+    }
+  }
   .blockquote {
     height: 382px;
     padding: 0% 0%;
