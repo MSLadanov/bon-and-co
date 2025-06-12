@@ -50,6 +50,7 @@ footer {
         display: none;
       }
       &-mobile {
+        margin-top: 2%;
         @include mobile {
           display: none;
         }

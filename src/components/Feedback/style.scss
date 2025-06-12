@@ -66,6 +66,9 @@
 }
 
 .feedback-desktop {
+  @include mobile {
+    display: none;
+  }
   .feedback__text {
     align-self: center;
     margin-bottom: 0%;
