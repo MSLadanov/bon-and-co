@@ -1,3 +1,5 @@
+@use "../../globals.scss" as *;
+
 footer {
   .footer {
     &-nav {
@@ -5,7 +7,21 @@ footer {
       border-bottom: 1px solid black;
       margin: 5% 0%;
       padding: 15% 0%;
+      @include desktop {
+        justify-content: space-between;
+        flex-direction: row !important;
+        margin: 1% 0%;
+        padding: 2% 0%;
+      }
+      img {
+        @include mobile {
+          display: none;
+        }
+      }
       nav {
+        @include desktop {
+          margin-right: 10%;
+        }
         ul {
           list-style-type: none;
           li {
@@ -23,24 +39,50 @@ footer {
     &-links {
       margin-top: 5%;
       width: 50%;
+      @include desktop {
+        margin-top: 0%;
+        width: 12%;
+        margin-left: 10%;
+      }
     }
-    &-bottom{
+    &-bottom {
+      @include desktop {
+        display: none;
+      }
+      &-mobile{
+        p{
+          font-size: 14px;
+          color: #6F6F6F;
+        }
+        img{
+          &:first-of-type{
+            margin-top: 2%;
+            width: 91px;
+            height: 38px;
+          }
+          &:last-of-type{
+            margin-top: 2%;
+            width: 313px;
+            height: 64px;
+          }
+        }
+      }
       padding: 10%;
-      img{
-        &:first-of-type{
+      img {
+        &:first-of-type {
           align-self: flex-start;
           width: 65px;
           height: 27px;
         }
-        &:last-of-type{
+        &:last-of-type {
           width: 225px;
           height: 46px;
         }
       }
-      p{
-        color: #6F6F6F;
+      p {
+        color: #6f6f6f;
         font-size: 14px;
-        &:first-of-type{
+        &:first-of-type {
           margin-top: 10%;
         }
       }

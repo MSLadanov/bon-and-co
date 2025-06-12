@@ -7,7 +7,8 @@ import { NavLink } from "react-router";
 import { ROUTES } from "@routes/constants";
 import getAmo from "@assets/supporters/getamo.png";
 import myBusiness from "@assets/supporters/my-business.png";
-import { Image } from "@mantine/core";
+import { Center, Image } from "@mantine/core";
+import footerLogo from "@assets/logo/footer-logo.png";
 import "./style.scss";
 
 export const Footer = (): ReactElement => {
@@ -32,6 +33,7 @@ export const Footer = (): ReactElement => {
             </li>
           </ul>
         </nav>
+        <Image src={footerLogo} alt="footer-logo" w={"48px"} h={"80px"} />
         <Flex
           className="footer-links"
           justifyContent="space-between"
@@ -42,14 +44,21 @@ export const Footer = (): ReactElement => {
           <FaTelegram size={"2em"} />
         </Flex>
       </Flex>
-      <Flex
-        className="footer-bottom"
-        flexDirection="column"
-      >
+      <Flex className="footer-bottom" flexDirection="column">
         <Image src={getAmo} alt="get-amo" />
         <Image src={myBusiness} alt="my-business" />
         <p>2024 © Бондарев Евгений Владимирович Все права защищены.</p>
         <p>Политика конфиденциальности</p>
+      </Flex>
+      <Flex className="footer-bottom-mobile" flexDirection="column">
+        <Center>
+          <p>2024 © Бондарев Евгений Владимирович Все права защищены.</p>{" "}
+          <p>Политика конфиденциальности</p>
+        </Center>
+        <Center>
+          <Image src={getAmo} alt="get-amo" />
+          <Image src={myBusiness} alt="my-business" />
+        </Center>
       </Flex>
     </footer>
   );
