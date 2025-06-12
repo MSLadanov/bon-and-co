@@ -11,6 +11,7 @@ import gallery7 from "@assets/Gallery/gallery7.png";
 import gallery8 from "@assets/Gallery/gallery8.png";
 import gallery9 from "@assets/Gallery/gallery9.png";
 import gallery10 from "@assets/Gallery/gallery10.png";
+import './styles.scss'
 
 const galleryImages = [
   { src: gallery1, alt: "Пример работы 1" },
@@ -27,8 +28,8 @@ const galleryImages = [
 
 export const GalleryList = (): ReactElement => {
   return (
-    <Flex direction="column" gap="md">
-      <Flex direction="column" mb="xl">
+    <Flex className="gallery" direction="column" gap="md">
+      <Flex className="gallery__title" direction="column" mb="xl" align={'center'}>
         <h1>Фотогалерея</h1>
         <p>
           Оцените наше мастерство в разделе галереи. Здесь представлены примеры
