@@ -1,26 +1,85 @@
-.welcome{
-    margin-top: 17%;
-    h1{
-        font-size: 32px;
-        line-height: 35px;
-        padding: 0% 10%;
+@use "../../globals.scss" as *;
+
+.welcome {
+  @include desktop {
+    display: none;
+  }
+  margin-top: 17%;
+  h1 {
+    font-size: 32px;
+    line-height: 35px;
+    padding: 0% 10%;
+  }
+  p {
+    margin-top: 10%;
+    padding: 0% 10%;
+    line-height: 100%;
+    font-size: 16px;
+    margin-bottom: 17%;
+  }
+  button {
+    margin: 0% 10%;
+    height: 50px;
+  }
+  .blockquote {
+    margin-top: 8%;
+    .mantine-Paper-root {
+      font-size: 16px;
+      line-height: 100%;
     }
-    p{
-        margin-top: 10%;
-        padding: 0% 10%;
+  }
+}
+.welcome-desktop {
+  @include mobile {
+    display: none;
+  }
+  &-layout {
+    &__right {
+      h1 {
+        position: relative;
+        z-index: 1;
+        top: 5%;
+        margin-left: 25%;
         line-height: 100%;
-        font-size: 16px;
-        margin-bottom: 17%;
+        margin-bottom: 10%;
+      }
+      p {
+        margin-left: 25%;
+      }
+      button {
+        position: relative;
+        top: 10%;
+        width: 336px;
+        height: 53px;
+        margin-left: 25%;
+      }
+      width: 50%;
     }
-    button{
-        margin: 0% 10%;
-        height: 50px;
+    &__left {
+      img {
+        position: relative;
+        top: 15%;
+        right: 6%;
+      }
     }
-    .blockquote{
-        margin-top: 8%;
-        .mantine-Paper-root{
-            font-size: 16px;
-            line-height: 100%;
+  }
+  .blockquote {
+    margin-top: 10%;
+    height: 336px;
+    .mantine-Paper-root {
+      padding: 10%;
+      &.with-quotes {
+        font-size: 20px;
+        &::before {
+          top: 10%;
+          left: 5%;
         }
+        &::after {
+          content: "”";
+          bottom: 0%;
+          right: 6%;
+        }
+      }
     }
+  }
 }

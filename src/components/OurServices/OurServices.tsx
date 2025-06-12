@@ -57,26 +57,51 @@ export const OurServices = () => {
     />
   ));
   return (
-    <Flex className="our-services" flexDirection="column">
-      <h2>Наши услуги:</h2>
-      <Carousel
-        withIndicators
-        withControls={false}
-        styles={{
-          container:{
-            position:'relative',
-          },
-          indicators:{
-            position:'absolute',
-            bottom:'-40px',
-          },
-          indicator: {
-            backgroundColor: "black",
-          },
-        }}
-      >
-        {slides}
-      </Carousel>
-    </Flex>
+    <>
+      <Flex className="our-services" flexDirection="column">
+        <h2>Наши услуги:</h2>
+        <Carousel
+          withIndicators
+          withControls={false}
+          styles={{
+            container: {
+              position: "relative",
+            },
+            indicators: {
+              position: "absolute",
+              bottom: "-40px",
+            },
+            indicator: {
+              backgroundColor: "black",
+            },
+          }}
+        >
+          {slides}
+        </Carousel>
+      </Flex>
+      <Flex className="our-services-desktop" flexDirection="column">
+        <h2>Наши услуги:</h2>
+        <Carousel
+          withIndicators
+          withControls={false}
+          slideSize="25%"
+          slideGap={'xs'}
+          styles={{
+            container: {
+              position: "relative",
+            },
+            indicators: {
+              position: "absolute",
+              bottom: "-40px",
+            },
+            indicator: {
+              backgroundColor: "black",
+            },
+          }}
+        >
+          {slides}
+        </Carousel>
+      </Flex>
+    </>
   );
 };
