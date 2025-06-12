@@ -35,7 +35,7 @@ export const Feedback = (): ReactElement => {
   ));
   return (
     <Flex className="feedback" flexDirection="column">
-      <Flex className="feedback__text" flexDirection="column">
+      <Flex className="feedback__text" flexDirection="column" alignItems="align-center">
         <h1>Отзывы</h1>
         <p>
           Мы гордимся тем, что наши клиенты остаются довольны нашей работой.
@@ -46,14 +46,14 @@ export const Feedback = (): ReactElement => {
         <Carousel>{reviewSlides}</Carousel>
       </Blockquote>
       <Image src={feedback1} alt="feedback1" />
-      <Flex className="feedback__field" flexDirection="column">
-        <h1>Отзывы</h1>
+      <Flex className="feedback__field" flexDirection="column" alignItems="align-center">
+        <h1>Написать отзыв</h1>
         <p>
-          Мы гордимся тем, что наши клиенты остаются довольны нашей работой.
-          Читайте отзывы тех, кто уже выбрал BON&CO для своего интерьера.
+          Ваша обратная связь поможет нам стать лучше и предложить еще более
+          качественные услуги.
         </p>
-        <Input placeholder="Имя"/>
-        <TextArea placeholder="Комментарий"/>
+        <Input placeholder="Имя" />
+        <TextArea placeholder="Комментарий" />
         <Button className="black">Отправить</Button>
       </Flex>
     </Flex>
