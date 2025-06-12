@@ -5,23 +5,23 @@ $black: #1b1b1b;
 $sandy: #e1caa1;
 $creme: #fcfbf7;
 
-:export{
+:export {
   burgundy: $burgundy;
   black: $black;
   sandy: $sandy;
-  creme: $creme
+  creme: $creme;
 }
 
 $breakpoint-mobile-desktop: 1200px;
 
-@mixin mobile {
-  @media screen and (max-width: $breakpoint-mobile-desktop) {
+@mixin desktop {
+  @media screen and (min-width: $breakpoint-mobile-desktop) {
     @content;
   }
 }
 
-@mixin desktop {
-  @media screen and (min-width: $breakpoint-mobile-desktop) {
+@mixin mobile {
+  @media screen and (max-width: ($breakpoint-mobile-desktop - 1 )) {
     @content;
   }
 }
