@@ -1,9 +1,10 @@
 import { Flex } from "@ui/Flex";
 import { ReactElement } from "react";
-import { Center, Image, SimpleGrid } from "@mantine/core";
+import { Center, Container, Image, SimpleGrid } from "@mantine/core";
 import advantages1 from "@assets/Advantages/advantages1.png";
 import advantages2 from "@assets/Advantages/advantages2.png";
 import advantages3 from "@assets/Advantages/advantages3.png";
+import advantages3Desktop from "@assets/Advantages/advantages3-desktop.png";
 import { CollapseBox } from "@ui/CollapseBox";
 import { Button } from "@ui/Button";
 import Marquee from "react-fast-marquee";
@@ -86,8 +87,12 @@ export const Advantages = (): ReactElement => {
           отклика.
         </Blockquote>
       </Flex>
-      <Flex className="advantages-desktop" flexDirection="column" alignItems="align-center">
-        <SimpleGrid w={'80%'} cols={{ base: 2 }}>
+      <Flex
+        className="advantages-desktop"
+        flexDirection="column"
+        alignItems="align-center"
+      >
+        <SimpleGrid w={"80%"} cols={{ base: 2 }}>
           <div>
             <h2>Преимущества</h2>
             <p>
@@ -98,11 +103,17 @@ export const Advantages = (): ReactElement => {
             </p>
           </div>
           <div>
-            <Image src={advantages1} alt="advantages" w={'500px'} h={'336px'} />
+            <Image src={advantages1} alt="advantages" w={"500px"} h={"336px"} />
           </div>
           <Center>
-            <Image src={advantages2} alt="advantages" w={'350px'} h={'248px'} mt={"5%"} />
-            <Button>Перейти в галерею</Button>
+            <Image
+              src={advantages2}
+              alt="advantages"
+              w={"350px"}
+              h={"248px"}
+              mt={"5%"}
+            />
+            <Button>ПЕРЕЙТИ В ГАЛЕРЕЮ</Button>
           </Center>
           <div>
             {advantages.map((adv) => (
@@ -113,6 +124,28 @@ export const Advantages = (): ReactElement => {
               />
             ))}
           </div>
+        </SimpleGrid>
+        <SimpleGrid w={"100%"} cols={{ base: 2 }} mt={'10%'}>
+          <Container pl={'20%'} flex={''}>
+            <h2>Искусство в деталях: Мастер-класс</h2>
+            <p>
+              Приглашаем на мастер-класс по созданию раковин из керамогранита в
+              Краснодаре. Раковины из керамогранита становятся всё более
+              популярными, и вы можете стать одним из первых специалистов в этой
+              трендовой технологии.
+            </p>
+            <h3>Что включено в мастер-класс?</h3>
+            <ul>
+              <li>2 дня обучения от опытных мастеров</li>
+              <li>Материалы и инструменты предоставляются</li>
+              <li>Сертификат об окончании курса</li>
+              <li>Возможность трудоустройства в нашу компанию</li>
+            </ul>
+            <Button>ЗАПИСАТЬСЯ НА МАСТЕР-КЛАСС</Button>
+          </Container>
+          <Center>
+            <Image src={advantages3Desktop} alt="advantages" />
+          </Center>
         </SimpleGrid>
       </Flex>
     </>
