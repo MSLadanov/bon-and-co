@@ -5,13 +5,19 @@ import { Flex } from "@components/ui/Flex";
 import { Button } from "@components/ui/Button";
 import { Image } from "@mantine/core";
 import { ReactElement } from "react";
+import { PiStarFourFill } from "react-icons/pi";
 import "./style.scss";
 
 export const AboutUs = (): ReactElement => {
   return (
-    <>
+    <Flex className="about" flexDirection="column">
       <Image src={about1} alt="about1" />
-      <Flex className="about" flexDirection="column">
+      <Flex className="about__stars" alignItems="align-center" justifyContent="center">
+        <PiStarFourFill size='1.5em'/>
+        <PiStarFourFill size='1.5em'/>
+        <PiStarFourFill size='1.5em'/>
+      </Flex>
+      <Flex className="about__text" flexDirection="column" alignItems="align-center">
         <h1>О компании</h1>
         <p>
           В BON&CO мы ценим доверие наших клиентов и гарантируем высокое
@@ -21,9 +27,9 @@ export const AboutUs = (): ReactElement => {
         </p>
         <Button>ИССЛЕДОВАТЬ АССОРТИМЕНТ</Button>
       </Flex>
-      <Image src={about2} alt="about2" />
+      <Image src={about2} alt="about2" mt={'17%'} />
       <Image src={about3} alt="about3" />
-      <Flex className="why-we-are" flexDirection="column">
+      <Flex className="about__why-we-are" flexDirection="column" alignItems="align-center">
         <h1>Почему мы?</h1>
         <p>
           Мы ценим каждого клиента и стремимся к идеальному результату. Ваше
@@ -31,6 +37,6 @@ export const AboutUs = (): ReactElement => {
         </p>
         <p>Доверьтесь нам — и ваш интерьер заиграет новыми гранями.</p>
       </Flex>
-    </>
+    </Flex>
   );
 };
