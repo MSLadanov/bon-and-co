@@ -49,18 +49,21 @@ footer {
       @include desktop {
         display: none;
       }
-      &-mobile{
-        p{
-          font-size: 14px;
-          color: #6F6F6F;
+      &-mobile {
+        @include mobile {
+          display: none;
         }
-        img{
-          &:first-of-type{
+        p {
+          font-size: 14px;
+          color: #6f6f6f;
+        }
+        img {
+          &:first-of-type {
             margin-top: 2%;
             width: 91px;
             height: 38px;
           }
-          &:last-of-type{
+          &:last-of-type {
             margin-top: 2%;
             width: 313px;
             height: 64px;
