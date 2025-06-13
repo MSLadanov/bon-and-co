@@ -1,3 +1,5 @@
+@use '../../../globals.scss' as *;
+
 button{
     text-transform: uppercase;
     border: 1px solid black;
@@ -8,5 +10,11 @@ button{
     &.transparent{
         background-color: transparent;
         color: black;
+        transition: all ease-in 0.2s;
+        &:hover{
+            border: 1px solid $burgundy;
+            background-color: $burgundy;
+            color: white
+        }
     }
 }
