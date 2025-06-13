@@ -64,7 +64,7 @@ export const Feedback = (): ReactElement => {
           </p>
           <Input placeholder="Имя" />
           <TextArea placeholder="Комментарий" />
-          <Button className="black">Отправить</Button>
+          <Button className="black">ОТПРАВИТЬ</Button>
         </Flex>
       </Flex>
       <Flex className="feedback-desktop" flexDirection="column">
@@ -95,7 +95,7 @@ export const Feedback = (): ReactElement => {
           </p>
           <Input placeholder="Имя" />
           <TextArea placeholder="Комментарий" />
-          <Button className="black">Отправить</Button>
+          <Button className="black">ОТПРАВИТЬ</Button>
         </Flex>
           <Image src={feedback1Desktop} alt="feedback1" />
         </SimpleGrid>

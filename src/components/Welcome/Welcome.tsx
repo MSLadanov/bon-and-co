@@ -15,7 +15,7 @@ export const Welcome = (): ReactElement => {
           Мы — мастерская по обработке керамогранита, создающая уникальные
           изделия для вашего интерьера.
         </p>
-        <Button>Исследовать ассортимент</Button>
+        <Button>ИССЛЕДОВАТЬ АССОРТИМЕНТ</Button>
         <img src={asset} alt="welcome-asset" />
         <Blockquote withQuotes={true} withBorders={true}>
           Наши дизайнерские решения включают стильные раковины, элегантные
@@ -36,7 +36,7 @@ export const Welcome = (): ReactElement => {
               Мы — мастерская по обработке керамогранита, создающая уникальные
               изделия для вашего интерьера.
             </p>
-            <Button>Исследовать ассортимент</Button>
+            <Button>ИССЛЕДОВАТЬ АССОРТИМЕНТ</Button>
           </Flex>
           <Flex className="welcome-desktop-layout__left">
             <img src={assetDesktop} alt="welcome-asset" />

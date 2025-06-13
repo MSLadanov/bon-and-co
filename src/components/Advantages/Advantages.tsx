@@ -60,7 +60,7 @@ export const Advantages = (): ReactElement => {
           />
         ))}
         <Image src={advantages2} alt="advantages" mt={"5%"} />
-        <Button>Перейти в галерею</Button>
+        <Button>ПЕРЕЙТИ В ГАЛЕРЕЮ</Button>
         <Image src={advantages3} alt="advantages" w={"100vw"} mb={"15%"} />
         <h2>Преимущества</h2>
         <p>
@@ -76,7 +76,7 @@ export const Advantages = (): ReactElement => {
           <li>Сертификат об окончании курса</li>
           <li>Возможность трудоустройства в нашу компанию</li>
         </ul>
-        <Button>Записаться на мастер-класс</Button>
+        <Button>ЗАПИСАТЬСЯ НА МАСТЕР-КЛАСС</Button>
         <Marquee>
           ✦ 15 000 рублей вместо 25 000 рублей ✦ Цена действует при записи в
           течение 2 дней с момента получения письма.
